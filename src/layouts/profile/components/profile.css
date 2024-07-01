@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.app {
+    background: #fff;
+    margin: 25px auto;
+    padding: 25px;
+    max-width: 800px;
+    width: 95%;
+}
+
+.nav {
+    margin-bottom: 25px;
+}
+
+.nav a {
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-right: 10px;
+}
+
+.nav a.active {
+    color: #fff;
+    background: #1AA1DC;
+}
+
+.nav a.inactive {
+    font-style: italic;
+}

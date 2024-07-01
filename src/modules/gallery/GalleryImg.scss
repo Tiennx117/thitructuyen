@@ -1,0 +1,13 @@
+
+.image-grid {
+display: flex;
+flex-wrap: wrap;
+}
+
+@media screen and (max-width: 400px) {
+    .image-grid {
+      flex-direction: column;
+      flex-wrap: no-wrap;
+    }
+    
+  }

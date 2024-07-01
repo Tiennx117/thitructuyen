@@ -1,0 +1,38 @@
+.table tr {
+    cursor: pointer;
+}
+
+.hiddenRow {
+    padding: 0 !important;
+}
+
+.overlayPanel {
+    width: 100%;
+    position: relative;
+
+    .overlayPanelTop {
+        float: left;
+        width: 100%;
+        background: #3d4758;
+        text-align: center;
+        padding: 13px 30px 13px 30px;
+        border-radius: 5px 5px 0 0;
+        font-size: 13px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        position: relative;
+    }
+
+    .overlayPanelBottom {
+        float: left;
+        width: 100%;
+        background: #fff;
+        padding: 13px 30px 13px 30px;
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+.role:active {
+    border: 5px solid red;
+}

@@ -1,0 +1,35 @@
+.header_raw {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eef0f3;
+    height: 30px;
+}
+
+.text_search {
+    width: "100%"
+}
+
+.icon_right {
+    margin-right: 50px;
+    display: flex;
+}
+
+.lable_iconleft {
+    margin-right: 8px;
+}
+
+.content_raw {
+    height: 500px;
+    border: 1px solid rgb(202, 200, 200);
+}
+
+.btnsub {
+    float: right;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    width: 150px;
+    height: 30px;
+}
+.groupbtn{
+    margin-top: 30px;
+}

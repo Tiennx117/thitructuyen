@@ -1,0 +1,195 @@
+.checkbox-exam {
+    margin-bottom: 1rem;
+    margin-left: 4.5%;
+}
+
+.text-checkbox {
+    font-weight: 500;
+}
+
+.question-title {
+    border-bottom: 1px solid #f0f1f2;
+}
+
+.btn-question {
+    border-top: 1px solid #f0f1f2;
+}
+
+.oclock-title {
+    font-size: 1rem;
+}
+
+.oclock-time {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ff0000;
+    margin-top: -0.7rem;
+}
+
+.text-time {
+    font-size: 2rem;
+}
+
+.media-body-navigation {
+    margin-left: 1rem;
+    flex: 1;
+}
+
+.title-information {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.parameter {
+    text-align: center;
+    font-weight: 500;
+}
+
+.body-information {
+    border-right: 1px solid #a8a8a8;
+}
+
+.layout-left-text {
+    float: left;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-color: #f0f1f2;
+    color: black;
+}
+
+.layout-right-text {
+    float: left;
+    width: 79%;
+    margin-left: 5%;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.text-question-layout-right {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.question form {
+    font-size: 1rem;
+}
+
+.question-type5 {
+    padding: 16px;
+    background-color: white;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+}
+
+.mark-question {
+    cursor: pointer;
+}
+
+.mark-question-1 {
+    cursor: pointer;
+    color: #ff0000;
+}
+
+// button:focus {
+//     background-color: rgb(255, 255, 255);
+//     color: black;
+// }
+
+button {
+    background-color: #0084ff;
+    color: #f0f1f2;
+    border: none;
+    font-size: 14px;
+}
+
+.directionalTextListM {
+    background-color: orangered;
+}
+
+.directionalTextList {
+    background-color: green;
+}
+
+.directionaltextlistn {
+    background-color: rgb(253, 255, 253);
+}
+
+.p-dialog-content {
+    overflow-y: auto;
+}
+
+.card-body-1 {
+    padding: 0.5rem 1.25rem;
+}
+
+.ask-question p.card-text span {
+    margin-bottom: 8px;
+    font-size: 13px;
+
+    svg {
+        position: relative;
+        top: -1px;
+    }
+}
+
+.displayedTime {
+    h2 {
+        font-size: 30px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        color: red;
+    }
+}
+
+.ask-question {
+    .circle {
+        min-width: 3rem;
+        height: 40px;
+        line-height: 28px;
+    }
+
+}
+
+.media-left {
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+.p-tooltip-text {
+    background-color: #fafafa !important;
+    color: black !important;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.vietnamese-typing-btn {
+    border: 1px solid #EFF3F8;
+    cursor: pointer;
+    background-color: #EFF3F8;
+    opacity: 0.5;
+    padding: 0px 10px;
+}
+
+.vietnamese-typing-btn-on {
+    border: 1px solid #EFF3F8;
+    //cursor: pointer;
+    background-color: rgb(255, 129, 0);
+    padding: 0px 10px;
+}
+
+.rw-conversation-container .rw-response {
+    background-color: #e7e7e9 !important;
+}
+.rw-conversation-container .rw-carousel-card {
+    min-height: 245px !important;
+    width: 187px !important;
+    min-width: 187px !important;
+}
+.rw-conversation-container .rw-carousel-container {
+    min-height: 245px !important;
+}

@@ -1,0 +1,32 @@
+.header-fix {
+    background-color: #eef0f3;
+    padding: 3px 20px;
+    height: 36px;
+    color: #6f6a6a!important;
+    box-sizing: border-box;
+    top: -100px;
+    border-radius: 5px;
+    transition: top .3s;
+}
+
+@media (max-width: 767px) {
+    .title_learner {
+        margin-top: 10px !important;
+        display: block !important;
+    }
+    .progress-list {
+        display: flex;
+        // width: '100%' !important;
+        overflow: auto;
+    }
+    .input-style {
+        width: 310px;
+        margin-top: 10px;
+    }
+}
+@media (min-width: 768px) {
+    .input-style {
+        width: 500px;
+    }
+}
+

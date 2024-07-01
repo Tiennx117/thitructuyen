@@ -1,0 +1,30 @@
+.iconread-notionbar {
+    color: black;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.icondelete-notionbar {
+    color: rgba(0, 0, 0, 0.863);
+    width: 22px;
+    height: 22px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.notificationLayout {
+    .p-tabview-nav {
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+    .sidebar-notion {
+        width: 100% !important;
+    }
+}

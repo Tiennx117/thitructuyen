@@ -1,0 +1,38 @@
+  progress {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .progress-bar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #000; 
+    /* to center the percentage value */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .progress-bar[data-time]::before {
+    font-size: 10px;
+    content: attr(data-time) " ";
+  }
+
+  .img_playing{
+    position: absolute;
+    right: 76px;
+  }
+  @for $i from 0 through 100 {
+    .progress-tien-trinh-#{$i} {
+      background: radial-gradient(closest-side, white 79%, transparent 80% 100%), conic-gradient(#099814 calc(#{$i} * 1%), #e6e6e6 0);
+      animation: #{$i} 2s 1 forwards;
+      position: absolute;
+      right: 106px;
+    }
+    .progress-tien-trinh-#{$i}::before {
+      animation: #{$i} 2s 1 forwards;
+    }
+}

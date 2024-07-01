@@ -1,0 +1,117 @@
+html,
+body,
+#app {
+    height: 100%;
+}
+
+.container {
+    min-height: 100%;
+    text-align: left;
+
+    .btn {
+        display: inline-block;
+        margin-bottom: 15px;
+        border: 1px solid #313131;
+        background: white;
+        color: #3b3b3b;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+            background: #6b6b6b;
+            color: white;
+            transition: .5s;
+        }
+    }
+}
+
+.accordion {
+    margin: 0 auto;
+    padding: 20px;
+
+    .title {
+        padding: 10px 10px;
+        cursor: pointer;
+        transform: translate3d(0, 0, 0);
+        color: white;
+        position: relative;
+        font-size: 15px;
+        background: #999898;
+        margin-bottom: -1px;
+        border-radius: 5px;
+        text-align: left;
+
+        &::after {
+            content: "▼";
+            font-size: 15px;
+            color: white;
+            transition: transform .5s ease-in-out;
+            position: absolute;
+            right: 15px;
+            font-family: monospace;
+        }
+
+        &.is-expanded {
+            transition: background .5s;
+            background: #999898;
+
+            &::after {
+                content: "▲";
+                transform: rotate(-360deg);
+            }
+        }
+    }
+
+    .content {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .5s;
+        margin: 0;
+        padding: 0 10px;
+        border: solid 1px #eeeeee;
+        border-top: 0;
+
+        p {
+            padding: 10px 0;
+            margin: 0;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        &.is-expanded {
+            max-height: 500px;
+            overflow: hidden;
+
+            p {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.btntgl:hover {
+    background-color: #D3D3D3;
+}
+.bottom-title-faq {
+    float: left;
+    width: 54px;
+    height: 4px;
+    background: #f36464;
+    position: absolute;
+    //bottom: 15px;
+    left: 6px;
+    margin-top: 30px;
+}
+.bottom-title-lh {
+    float: left;
+    width: 54px;
+    height: 4px;
+    background: #f36464;
+    position: absolute;
+    //bottom: 15px;
+    left: 25px;
+    margin-top: 30px;
+}

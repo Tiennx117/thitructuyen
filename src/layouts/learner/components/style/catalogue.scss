@@ -1,0 +1,513 @@
+.underline-small {
+    color: black;
+    display: inline-block;
+    position: relative;
+
+}
+
+.underline-small::after {
+    content: '';
+    float: left;
+    width: 54px;
+    height: 4px;
+    background: #f24432;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    margin-bottom: 6px;
+}
+
+.btn-filter {
+    background-color: white;
+}
+
+.btn-filter:hover {
+    background-color: #3D4758;
+    color: white;
+}
+
+.input-field {
+    width: 100%;
+
+    .search-box {
+        height: 100%;
+        border: 0;
+        display: block;
+        width: 100%;
+        padding: 10px 30px 10px 20px;
+        font-size: 12px;
+        height: 45px;
+        color: #fff;
+        font-family: Lato, sans-serif;
+        overflow: visible;
+        line-height: 1.15;
+        margin: 0;
+        border: 1px solid #dde6e9;
+        border-radius: 28px;
+        color: #3a3f51;
+    }
+
+    .search-box:focus {
+        outline: none;
+    }
+
+    .search-box-responsive {
+        display: none;
+    }
+
+
+
+    .close-icon {
+        position: absolute;
+        cursor: pointer;
+        padding-left: 680px;
+        border: 1px solid transparent;
+        background-color: transparent;
+        display: inline-block;
+        outline: 0;
+    }
+
+    .close-icon:after {
+        font-family: montserratregular;
+        position: absolute;
+        cursor: pointer;
+        content: '✕';
+        display: block;
+        width: 30px;
+        height: 30px;
+        bottom: 0;
+        margin: 5px;
+        border-radius: 50%;
+        text-align: center;
+        color: #a9a9a9;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .search-icon {
+        position: absolute;
+        cursor: pointer;
+        padding-left: 720px;
+        border: 1px solid transparent;
+        background-color: transparent;
+        display: inline-block;
+        outline: 0;
+    }
+
+    .search-icon:after {
+        font-family: montserratregular;
+        position: absolute;
+        cursor: pointer;
+        content: '🔍︎';
+        display: block;
+        width: 30px;
+        height: 36px;
+        bottom: 0;
+        margin: 5px;
+        border-radius: 50%;
+        text-align: center;
+        color: #a9a9a9;
+        font-weight: 700;
+        font-size: 23px;
+    }
+
+    @media (max-width: 768px) {
+        // .search-box {
+        //     display: none;
+        // }
+
+        .search-box-responsive {
+            display: block;
+            height: 100%;
+            border: 0;
+            display: block;
+            width: 100%;
+            padding: 10px 30px 10px 20px;
+            font-size: 12px;
+            height: 45px;
+            color: #fff;
+            font-family: Lato, sans-serif;
+            overflow: visible;
+            line-height: 1.15;
+            margin: 0;
+            border: 1px solid #dde6e9;
+            border-radius: 28px;
+            color: #3a3f51;
+        }
+
+        .close-icon {
+            position: absolute;
+            cursor: pointer;
+            border: 1px solid transparent;
+            background-color: transparent;
+            display: inline-block;
+            outline: 0;
+            margin-left: 65%;
+            padding-left: 0;
+        }
+
+        .search-icon {
+            position: absolute;
+            cursor: pointer;
+            border: 1px solid transparent;
+            background-color: transparent;
+            display: inline-block;
+            outline: 0;
+            margin-left: 75%;
+            padding-left: 0;
+        }
+    }
+}
+
+.bottom-title-learning {
+    float: left;
+    width: 54px;
+    height: 4px;
+    background: #f36464;
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+}
+
+.left-learning {
+    padding-bottom: 0;
+    // height: 100%;
+    max-height: 100% !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #e5e5e5;
+
+    .progress-list-course {
+        list-style: none;
+        padding: 1rem;
+        background-color: #fff;
+
+
+        li {
+            list-style: none;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .course-list-li {
+            background-color: rgb(26, 161, 220);
+            color: #fff;
+        }
+
+        li .pie-title-center {
+            display: inline-block;
+            position: relative;
+            text-align: left;
+            vertical-align: middle;
+            width: 88px;
+            margin: 18px 10px 18px 35px;
+            height: 88px;
+        }
+
+        li .nav-link .d-flex :active {
+            background-color: rgb(26, 161, 220);
+            color: #fff;
+        }
+
+        .left-menu-active {
+            border-radius: 5px;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            background-color: rgb(26, 161, 220);
+            color: #fff
+        }
+
+        .left-menu {
+            width: 100%;
+            padding: 0.5rem 1rem;
+        }
+
+        .text-left-menu-active {
+            font-weight: 500;
+            font-size: 1.1rem
+        }
+
+        .text-left-menu {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #6c757d
+        }
+
+        .text-topic-menu-active {
+            cursor: pointer;
+            color: black;
+            font-weight: 600;
+            margin-left: 1rem;
+            margin-bottom: 0.4rem
+        }
+
+        .text-topic-menu {
+            cursor: pointer;
+            margin-left: 1rem;
+            margin-bottom: 0.4rem
+        }
+    }
+}
+
+.select-responsive-list-course {
+    display: none;
+
+}
+
+.font-size-tieude {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.search-all {
+    width: 500px !important;
+}
+
+.my-learning-container .right-learning .learning-public {
+    //bottom: 14px;
+    top: 27px
+}
+
+@media (max-width: 768px) {
+    // .progress-list-course {
+    //     display: none;
+    // }
+
+    .select-responsive-list-course {
+        display: block;
+        position: relative;
+        background-color: white;
+
+        .dropdown-item {
+            position: relative;
+        }
+    }
+
+    .font-size-tieude {
+        font-size: 13px;
+    }
+
+    // .my-learning-container{
+    //     margin-top: 8px;
+    // } 
+    .search-all {
+        width: 200px !important;
+    }
+
+    .search-box {
+        display: none;
+    }
+
+    .search-box-responsive {
+        display: block;
+    }
+
+    .right-learning .col-9 {
+        display: none;
+    }
+
+    .my-learning-container .right-learning .learning-public {
+        bottom: 13px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .my-learning-container {
+        .card-small-device {
+            height: 100% !important;
+
+            .course-small-device {
+                margin-left: 48% !important;
+                transform: translateX(-50%) !important;
+            }
+        }
+    }
+
+    .input-field {
+        .search-icon {
+            margin-left: 75%;
+        }
+
+        .search-box {
+            text-overflow: ellipsis;
+            padding-right: 40px;
+        }
+
+    }
+
+    #left-learning-id {
+        display: none;
+    }
+
+    .left-learning-responsive {
+        position: absolute;
+        z-index: 4 !important;
+        max-width: 60%;
+        top: 56px;
+        padding: 0;
+
+        .canv-name {
+            width: 100%;
+        }
+    }
+
+    .right-learning-reposive {
+        max-width: 92%;
+        margin-left: auto;
+
+        .card-deck {
+            justify-content: center;
+        }
+
+        .card-title-reponsive {
+            display: block !important;
+        }
+
+        .no-more-responsive {
+            height: 66vh;
+            width: 90vh;
+        }
+    }
+
+    .left-learning-icon {
+        max-width: fit-content;
+        position: absolute;
+        top: 10px;
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .input-field .search-icon {
+        position: absolute;
+        cursor: pointer;
+        border: 1px solid transparent;
+        background-color: transparent;
+        display: inline-block;
+        outline: 0;
+        margin-left: 85%;
+        padding-left: 0;
+    }
+
+    #left-learning-id {
+        display: none;
+    }
+
+    .left-learning-responsive {
+        position: absolute;
+        z-index: 4 !important;
+        max-width: 50%;
+        top: 56px;
+        padding: 0;
+
+        .canv-name {
+            width: 100%;
+        }
+    }
+
+    .right-learning-reposive {
+        max-width: 96%;
+        margin-left: auto;
+
+        .card-deck {
+            justify-content: center;
+        }
+
+        .no-more-responsive {
+            height: 66vh;
+            width: 90vh;
+        }
+    }
+
+    .left-learning-icon {
+        max-width: fit-content;
+        position: absolute;
+        top: 10px;
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .left-learning-responsive {
+        display: block;
+    }
+
+    .left-learning-icon {
+        display: none;
+    }
+
+    #overlay {
+        display: none !important;
+    }
+}
+
+#overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 3;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+}
+
+//menu course location 
+#menu-left {
+    top: 40px;
+    right: 20px;
+    display: none;
+    position: absolute;
+    z-index: 9;
+
+    &.visible {
+        display: block;
+    }
+}
+
+#icon-menu-left {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &.hovered {
+        background-color: #3333;
+    }
+}
+
+span.p-panelmenu-icon.pi.pi-chevron-right {
+    font-size: 10px !important;
+}
+
+a.p-menuitem-link {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+span.p-menuitem-text {
+    width: 190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.p-component.p-panelmenu-header {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.p-panelmenu .p-menuitem-text {
+    line-height: 1.5;
+}

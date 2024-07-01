@@ -1,0 +1,251 @@
+.body-status{
+    width: 100%;
+    height: 80vh;
+    max-height:100% !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #ebe8e8;
+}
+.body-content{
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.status-field-container {
+    margin-top: 20px;
+    width: 90%;
+}
+
+.write-post-container {
+    color: #626262;
+    background-color: var(--bg-color);
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+}
+.user-profile-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-settings .user-profile {
+    padding: 20px;
+}
+
+.user-profile div p {
+    color: #6a6a6a;
+    font-weight: 600;
+}
+
+.user-settings .user-profile a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #626262;
+}
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+.user-profile p {
+    margin-bottom: -5px;
+}
+
+.user-profile small {
+    font-size: 12px;
+}
+
+.status-field img {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+
+.status-field p {
+    font-size: 14px;
+    margin: 20px 0px 5px 0px;
+    text-transform: capitalize;
+    color: #626262;
+}
+
+.status-field p a {
+    color: var(--nav-color);
+}
+.post-reaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px;
+}
+.activity-icons div {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.activity-icons div img {
+    width: 22px;
+    margin-right: 10px;
+    height: 18px;
+}
+.post-profile-picture img {
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 4px;
+
+}
+
+.post-profile-picture {
+    display: flex;
+    align-items: center;
+}
+.hide-cmt{
+    display: none !important;
+}
+
+
+/* /////////////////////////////////////// */
+
+.img-sm {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+  }
+
+  .panel {
+    /* box-shadow: 0 2px 0 rgba(0, 0, 0, 0.075); */
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 15px;
+  }
+
+  .panel .panel-footer,
+  .panel>:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .panel .panel-heading,
+  .panel>:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  /* .panel-body {
+    padding: 25px 20px;
+  } */
+
+
+  .media-block .media-left {
+    float: left
+  }
+
+  .media-block .media-right {
+    float: right
+  }
+
+  .media-block .media-body {
+    overflow: auto;
+    width: 1000px !important
+  }
+
+  .middle .media-left,
+  .middle .media-right,
+  .middle .media-body {
+    vertical-align: middle
+  }
+
+  .thumbnail {
+    border-radius: 0;
+    border-color: #e9e9e9
+  }
+
+  .tag.tag-sm,
+  .btn-group-sm>.tag {
+    padding: 5px 10px;
+  }
+
+  .tag:not(.label) {
+    background-color: #fff;
+    padding: 6px 12px;
+    border-radius: 2px;
+    border: 1px solid #cdd6e1;
+    font-size: 12px;
+    line-height: 1.42857;
+    vertical-align: middle;
+    -webkit-transition: all .15s;
+    transition: all .15s;
+  }
+
+  .text-muted,
+  a.text-muted:hover,
+  a.text-muted:focus {
+    color: #acacac;
+  }
+
+  .text-sm {
+    font-size: 0.9em;
+  }
+
+  .text-5x,
+  .text-4x,
+  .text-5x,
+  .text-2x,
+  .text-lg,
+  .text-sm,
+  .text-xs {
+    line-height: 1.25;
+  }
+
+  .btn-trans {
+    background-color: transparent;
+    border-color: transparent;
+    color: #929292;
+  }
+
+  .btn-icon {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .btn-sm,
+  .btn-group-sm>.btn,
+  .btn-icon.btn-sm {
+    padding: 5px 10px !important;
+  }
+
+  .mar-top {
+    margin-top: 15px;
+  }
+
+  .mar-btm {
+    margin-left: 1rem;
+  }
+
+  @media screen and (max-width: 2560px) {
+    /* Các quy tắc phong cách cho màn hình Full HD */
+    .virtual-scroller{
+        width: "500px";
+        height: "200px" 
+    }
+  }
+  
+  /* Media query cho màn hình HD (720p) trở xuống */
+  @media screen and (max-width: 1280px) {
+    /* Các quy tắc phong cách cho màn hình HD */
+  }
+  
+  /* Media query cho màn hình SD (480p) trở xuống */
+  @media screen and (max-width: 854px) {
+    /* Các quy tắc phong cách cho màn hình SD */
+  }
+  
+  /* Media query cho màn hình di động (XS và SM) */
+  @media screen and (max-width: 767px) {
+    /* Các quy tắc phong cách cho màn hình di động */
+  }

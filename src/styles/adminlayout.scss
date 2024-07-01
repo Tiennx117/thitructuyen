@@ -1,0 +1,214 @@
+
+.layout-navbar-fixed .wrapper .main-header{
+    z-index: 1001;
+}
+.wrapper .content-wrapper {
+    // min-height: calc(100vh - calc(3.5rem + 1px));
+}
+.h-flex{
+    min-height: calc(100vh - calc(5.5rem + 1px));
+}
+// fix lỗi mở calendar, chọn năm, sau đó bỏ chọn fix min-win của calendar
+.p-datepicker{
+    min-width: 273px !important;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0;
+}
+.p-calendar-sm{
+    height: 32px;
+}
+
+.form-float-label .field {
+    margin-bottom: 1.5rem;
+}
+.p-inputwrapper-filled.p-multiselect.p-multiselect-chip .p-multiselect-label {
+    padding: 0.25rem 0.25rem;
+}
+// fix lệch label
+.p-float-label input:-webkit-autofill ~ label{
+    top: -11px;
+}
+.p-disabled, .p-disabled * {
+    cursor: not-allowed !important;
+    pointer-events: visible;
+    user-select: all;
+}
+.p-disabled, .p-component:disabled {
+    opacity: 1;
+}
+
+//custome tree
+.p-treetable .p-treetable-tbody > tr > td{
+    padding: 0.2rem
+}
+
+.tree-background-hidden> .p-tree-container .p-treenode .p-treenode-content.p-highlight{
+    background: none;
+}
+//
+.main-header{
+    z-index: 1000;
+}
+// fix change check box table - adminlte
+.p-checkbox .p-checkbox-box .p-checkbox-icon {
+    transition-duration: 0s;
+}
+// 
+.block-component {
+    cursor: not-allowed;
+}
+.pointer-events-none {
+    pointer-events: none;
+}
+// custome style calendar
+.p-datepicker table td{
+    padding: 1px;
+}
+.p-datepicker .p-datepicker-header{
+    padding: 0.1rem
+}
+.p-datepicker .p-datepicker-buttonbar {
+    padding: 0.1rem 0;
+}
+
+.p-calendar .p-button{
+    padding-left: 1px;
+    background-color: transparent;
+    color: #64748B;
+    border-top:1px solid #b2c2d8 !important;
+    border-right:1px solid #b2c2d8 !important;
+    border-bottom:1px solid #b2c2d8 !important;
+    border-left:none !important;
+}
+.p-calendar button:hover{
+    background-color: transparent !important;
+    color: #64748B !important;
+    
+}
+// end custome style calendar
+// .p-chips .p-chips-multiple-container .p-chips-token{
+//     margin:2px;
+// }
+.btn.btn-out-dashed {
+    outline: 1px dashed #fff;
+    outline-offset: -5px;
+}
+
+/* custom flex grow */
+.flex-1 {
+    flex: 1 !important;
+  }
+  .flex-2 {
+    flex: 2 !important;
+  }
+  .flex-3 {
+    flex: 3 !important;
+  }
+  .flex-4{
+    flex: 4 !important;
+  }
+  .flex-5{
+    flex: 5 !important;
+  }
+  .flex-6{
+    flex: 6 !important;
+  }
+
+  .p-sidebar .p-sidebar-content {
+    padding: 0;
+  }
+
+
+  .overflow-y-disable{
+    overflow-y: hidden;
+  }
+  .overflow-y-auto{
+    position: relative;
+    overflow-y: auto !important; 
+  }
+
+  //custom font size
+  .fsx-10px{
+    font-size: 10px !important;
+  }
+  .fsx-11px{
+    font-size: 11px !important;
+  }
+  .fsx-12px{
+    font-size: 12px !important;
+  }
+  .fsx-13px{
+    font-size: 13px !important;
+  }
+  .fsx-14px{
+    font-size: 14px !important;
+  }
+  .fsx-15px{
+    font-size: 15px !important;
+  }
+  .fsx-16px{
+    font-size: 16px !important;
+  }
+  //thêm option ẩn header sidebar
+  .sidebar-header-none .p-sidebar-header{
+    display: none;
+  }
+
+// .order{
+    
+//     &__header{
+//         height: 50px;
+//         border-bottom: 1px solid #ddd;
+//     }
+//     &__content{
+//         position: relative;
+//         height: calc(100vh - 46.5px - 50px - 50px - 13px);
+//         margin: 0;
+//         overflow-x: hidden !important;
+//       	overflow-y: auto !important;  /* <---------- required */
+        
+//     }
+//     &__footer{
+        
+//         height: 50px;
+//         background-color: #ddd;
+//     }
+//     &--overflow-y-disable{
+//         overflow-y: hidden;
+//     }
+// }
+
+.btnClose {  
+  margin-left: 5px !important;
+  background-color: whitesmoke !important;
+  color: #495057;
+}
+/*dropdown menu multiple*/
+.dropdown-menu li{
+  position: relative;
+}
+.dropdown-menu .submenu{
+  display: none;
+  position: absolute;
+  left: 100%;
+  top:-7px;
+}
+.dropdown-menu>li:hover>.submenu{
+  display: block;
+}
+.dropdown-menu>li:hover>.submenu-left{
+  right: 100%;
+  left: auto;
+}
+/*end dropdown menu multiple*/
+
+/*THEME GLOBAL EXTEND*/
+.bg-primary{
+  background-color: #1AA1DC !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  background-color: #1AA1DC !important;
+}

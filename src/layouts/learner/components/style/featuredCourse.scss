@@ -1,0 +1,52 @@
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    background-color: #1a38dc;
+    color: white;
+    border-color: #1a38dc;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: none;
+}
+
+.p-tabview .p-tabview-nav-btn.p-link {
+    width: 20px !important;
+}
+
+.rts___tab___selected {
+    background-color: #23b7e5 !important;
+    color: white !important;
+}
+
+.rts___btn {
+    color: black;
+    border-radius: 10px !important;
+}
+
+.rts___tab {
+    padding: 6px !important;
+}
+
+:root {
+    --rts-primary-color: #23b7e5 !important;
+}
+
+.rts___nav___btn {
+    border-color: white !important;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.BodyItem {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+.image-container {
+    width: 100%; /* Chiều rộng của thẻ div */
+    height: 300px; /* Chiều cao của thẻ div */
+    background-image: url('/images/Picture3.png');
+    background-size: cover;
+    background-position: center;
+  }

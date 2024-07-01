@@ -1,0 +1,33 @@
+$avatar-size: 50px;
+
+// WATCH VIDEO EXPLANATION: https://youtu.be/aQ2inFyLguo
+.select-img-item{
+  .container{
+    display: grid;
+    gap: 10px;  
+    grid-template-columns: 1fr 1fr 1fr;
+    column-count: 4;
+    min-width: 80px;
+}
+.container div {
+    background: #ccc;  
+    
+}
+.container .item1{
+    grid-column: 1 / span 3;
+    border: 1px solid #ddd;
+    img{
+      
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+    }
+}
+.container .item2, .item3{
+  border: 1px solid #ddd;
+  img{
+    width: 30px;
+  }
+}
+
+}

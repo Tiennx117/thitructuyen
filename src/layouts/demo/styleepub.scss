@@ -1,0 +1,83 @@
+#viewer {
+    //height: calc(100vh - 120px);
+}
+
+#viewer.spreads {
+    // width: 1200px;
+    //height: 600px;
+    box-shadow: 0 0 4px #ccc;
+    border-radius: 5px;
+    padding: 0;
+    position: relative;
+    //margin: 10px auto;
+    background: white url('ajax-loader.gif') center center no-repeat;
+    //top: calc(50vh - 400px);
+}
+
+#viewer.spreads .epub-view>iframe {
+    background: white;
+}
+
+#viewer.scrolled {
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    background: url('ajax-loader.gif') center center no-repeat;
+    box-shadow: 0 0 4px #ccc;
+    padding: 0px;
+    background: white;
+}
+
+#viewer.scrolled .epub-view>iframe {
+    background: white;
+}
+
+#prev {
+    // left: 40px
+}
+
+.arrow {
+    position: relative;
+    top: 50%;
+    margin-top: -32px;
+    font-size: 64px;
+    color: #E2E2E2;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    text-decoration: none;
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* Điều này sẽ đảm bảo các card bắt đầu từ bên trái của mỗi hàng */
+    gap: 20px;
+    /* Khoảng cách giữa các card */
+
+}
+
+.book-wrapper {
+    position: relative;
+    flex: 0 0 calc(20% - 20px);
+    /* 20% chiều rộng của mỗi card, trừ khoảng cách */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 5px;
+    border: 1px solid #ccc;
+
+}
+
+.book-header {
+    height: 60px
+}
+
+.book-summary {
+    height: (14 * 1.4 * 5 + 3)+px;
+    overflow: hidden;
+}
