@@ -1,5 +1,5 @@
 
-import { React, useEffect, useState, useRef,memo } from 'react';
+import { React, useEffect, useState, useRef, memo } from 'react';
 // import { useState } from 'react';
 import { Outlet, Route, Routes, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'
@@ -72,8 +72,10 @@ const NewLayout = () => {
     const lstAudioBookStore = useSelector(state => state.detailplayaudio) || [];
     const playerAudioItem = useSelector(state => state.playerAudioItem) || [];
 
-    const userDefault = getCurrentUserDefault()
-    const userID = userDefault.UserId;
+    // const userDefault = getCurrentUserDefault()
+    // const userID = userDefault.UserId;
+
+    const userID = 1;
     const [filterBy1, setfilterBy1] = useState({
         PageNumber: 1,
         RecordsPerPage: 4,
@@ -82,9 +84,53 @@ const NewLayout = () => {
         SortOrder: 'ASC'
     });
 
+    const menuItems1 = [
+        {
+            Title: "Học tập",
+            Action: "/learner/my-learning",
+            menuLevel2: {
+                parent:0,
+                subMenuItems: [
+                    {
+                        Title: "Bài học và thi của tôi",
+                        Action: "learner/my-learning"
+                    },
+                    {
+                        Title: "Khóa học công khai",
+                        Action: "learner/catalogue"
+                    },
+                    {
+                        Title: "Hành trang số",
+                        Action: "learner/location-new"
+                    }
+                ]
+            }
+        },
+        {
+            Title: "Tương tác",
+            Action: "/collaborate/conversation",
+            menuLevel2: {
+                parent:1,
+                subMenuItems: [
+                    {
+                        Title: "Bài học và thi của tôi",
+                        Action: "learner/my-learning"
+                    },
+                    {
+                        Title: "Khóa học công khai",
+                        Action: "learner/catalogue"
+                    },
+                    {
+                        Title: "Hành trang số",
+                        Action: "learner/location-new"
+                    }
+                ]
+            }
+        }
+    ]
+
     useEffect(() => {
-        // call api here 
-        loadApi()
+        // loadApi()
 
     }, []);
     const loadApi = async () => {
@@ -119,13 +165,13 @@ const NewLayout = () => {
             setIsShowModal(false);
             console.log("courseID", dataBanner)
 
-            navigate('/learner/featured-course', { state: {visible: true, courseID: dataBanner.CourseID} })
+            navigate('/learner/featured-course', { state: { visible: true, courseID: dataBanner.CourseID } })
             // navigate('/learner/featured-course')
         } else if (item2.length == 1) {
             console.log("2", item2)
             setIsShowModal(false);
 
-            navigate("/learner/my-learning/" + item2[0].LaunchCode + "-"+item2[0].CourseType + "-" + item2[0].IDFeaturedCourse)
+            navigate("/learner/my-learning/" + item2[0].LaunchCode + "-" + item2[0].CourseType + "-" + item2[0].IDFeaturedCourse)
         }
     }
 
@@ -142,7 +188,7 @@ const NewLayout = () => {
                         src={item.item.FilePath}
                         alt="no image"
                         onClick={() => openModal(dataCourse)}
-                        style={{cursor:'pointer'}}
+                        style={{ cursor: 'pointer' }}
                     />
                 </a>
             </div>
@@ -176,7 +222,7 @@ const NewLayout = () => {
             <nav>
                 {/* id='menu_bar1' */}
                 <ul id='menu_bar1' className="menus1">
-                    {menuItems.length > 1 && menuItems.map((item, index) => {
+                    {menuItems1.length > 1 && menuItems1.map((item, index) => {
                         if (appSetting.SITE_RECRUITMENT == "TRUE") {
                             if (item?.Title == 'Học tập') {
                                 return (
@@ -213,7 +259,7 @@ const NewLayout = () => {
             <nav>
                 {/* id='menu_bar2' */}
                 <ul id='menu_bar2' className="menus2">
-                    {menuItems.map((item, index) => {
+                    {menuItems1.map((item, index) => {
                         return (
                             <SubNavigation key={index} urlParent={item.Action} subMenus={item.menuLevel2} />
                         );
@@ -318,72 +364,72 @@ const NewLayout = () => {
         )
     }
 
-    useEffect(() => {
-        if (TurnOnChatbot == "TRUE") {
-            setTimeout(() => {
-                document.getElementsByClassName("rw-launcher")[0].addEventListener("click", myGreeting);
-                myGreeting();
-            }, 2000);
-            const script = document.createElement("script");
-            // script.src = "https://unpkg.com/@rasahq/rasa-chat@0.1.3/dist/widget.js";
-            const defaultsrc = window.location.origin + '/rasa.js';
-            script.src = defaultsrc;
-            script.async = true;
-            script.onload = () => {
-                window.WebChat.default(
-                    {
-                        selector: "#webchat",
-                        initPayload: "/greet",
-                        customData: { "language": "en" }, // arbitrary custom data. Stay minimal as this will be added to the socket
-                        socketUrl: appSetting.RASA_SOCKET_URL,
-                        //socketPath: "/socket.io/",
-                        title: appSetting.RASA_TITLE,
-                        subtitle: appSetting.RASA_SUBTITLE,
-                        profileAvatar: window.location.origin + '/images/vietinbank.png',
-                        params: { "storage": "session" },
-                        inputTextFieldHint: "Nhập nội dung cần hỗ trợ"
-                    },
-                    null
-                );
-            }
-            script.async = true;
-            document.head.appendChild(script);
-        }
-        else {
-            if (userRoles.filter(x => x.mnUserRoleId == 7).length > 0) {
-                setTimeout(() => {
-                    document.getElementsByClassName("rw-launcher")[0].addEventListener("click", myGreeting);
-                    myGreeting();
-                }, 2000);
-                const script = document.createElement("script");
-                // script.src = "https://unpkg.com/@rasahq/rasa-chat@0.1.3/dist/widget.js";
-                const defaultsrc = window.location.origin + '/rasa.js';
-                script.src = defaultsrc;
-                script.async = true;
-                script.onload = () => {
-                    window.WebChat.default(
-                        {
-                            selector: "#webchat",
-                            initPayload: "/greet",
-                            customData: { "language": "en" }, // arbitrary custom data. Stay minimal as this will be added to the socket
-                            socketUrl: appSetting.RASA_SOCKET_URL,
-                            //socketPath: "/socket.io/",
-                            title: appSetting.RASA_TITLE,
-                            subtitle: appSetting.RASA_SUBTITLE,
-                            profileAvatar: window.location.origin + '/images/vietinbank.png',
-                            params: { "storage": "session" },
-                            inputTextFieldHint: "Nhập nội dung cần hỗ trợ"
-                        },
-                        null
-                    );
-                }
-                script.async = true;
-                document.head.appendChild(script);
-            }
-        }
-        initDb();
-        deleteData2Day()
-    }, [])
+    // useEffect(() => {
+    //     if (TurnOnChatbot == "TRUE") {
+    //         setTimeout(() => {
+    //             document.getElementsByClassName("rw-launcher")[0].addEventListener("click", myGreeting);
+    //             myGreeting();
+    //         }, 2000);
+    //         const script = document.createElement("script");
+    //         // script.src = "https://unpkg.com/@rasahq/rasa-chat@0.1.3/dist/widget.js";
+    //         const defaultsrc = window.location.origin + '/rasa.js';
+    //         script.src = defaultsrc;
+    //         script.async = true;
+    //         script.onload = () => {
+    //             window.WebChat.default(
+    //                 {
+    //                     selector: "#webchat",
+    //                     initPayload: "/greet",
+    //                     customData: { "language": "en" }, // arbitrary custom data. Stay minimal as this will be added to the socket
+    //                     socketUrl: appSetting.RASA_SOCKET_URL,
+    //                     //socketPath: "/socket.io/",
+    //                     title: appSetting.RASA_TITLE,
+    //                     subtitle: appSetting.RASA_SUBTITLE,
+    //                     profileAvatar: window.location.origin + '/images/vietinbank.png',
+    //                     params: { "storage": "session" },
+    //                     inputTextFieldHint: "Nhập nội dung cần hỗ trợ"
+    //                 },
+    //                 null
+    //             );
+    //         }
+    //         script.async = true;
+    //         document.head.appendChild(script);
+    //     }
+    //     else {
+    //         if (userRoles.filter(x => x.mnUserRoleId == 7).length > 0) {
+    //             setTimeout(() => {
+    //                 document.getElementsByClassName("rw-launcher")[0].addEventListener("click", myGreeting);
+    //                 myGreeting();
+    //             }, 2000);
+    //             const script = document.createElement("script");
+    //             // script.src = "https://unpkg.com/@rasahq/rasa-chat@0.1.3/dist/widget.js";
+    //             const defaultsrc = window.location.origin + '/rasa.js';
+    //             script.src = defaultsrc;
+    //             script.async = true;
+    //             script.onload = () => {
+    //                 window.WebChat.default(
+    //                     {
+    //                         selector: "#webchat",
+    //                         initPayload: "/greet",
+    //                         customData: { "language": "en" }, // arbitrary custom data. Stay minimal as this will be added to the socket
+    //                         socketUrl: appSetting.RASA_SOCKET_URL,
+    //                         //socketPath: "/socket.io/",
+    //                         title: appSetting.RASA_TITLE,
+    //                         subtitle: appSetting.RASA_SUBTITLE,
+    //                         profileAvatar: window.location.origin + '/images/vietinbank.png',
+    //                         params: { "storage": "session" },
+    //                         inputTextFieldHint: "Nhập nội dung cần hỗ trợ"
+    //                     },
+    //                     null
+    //                 );
+    //             }
+    //             script.async = true;
+    //             document.head.appendChild(script);
+    //         }
+    //     }
+    //     initDb();
+    //     deleteData2Day()
+    // }, [])
     const myGreeting = () => {
         setTimeout(() => {
             document.getElementsByClassName('rw-sender')[0].addEventListener('submit', function (evt) {

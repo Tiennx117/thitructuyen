@@ -64,7 +64,6 @@ function AuthLayout() {
       toast.current.clear();
     }
   }, [storeNetwork.count]);
-
   return (
     <>
       {/* <iframe src={sessionStorage.getItem('LMS_URL') + '?tm=' + tm} style={{ display: 'none' }}></iframe> */}

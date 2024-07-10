@@ -56,14 +56,15 @@ export default function App() {
 
                                 <Route path="/public" element={<PublicPage />} />
                                 <Route path="/login" element={<LoginLMS />} />
-                                <Route path="/logout" element={<Logout />} />
+                                <Route path="/logout" element={<Logout />} /> 
                                 <Route path="/readbook" element={<ReadBook />} />
                                 <Route element={<RequireAuth />}>
                                     <Route path='*' element={<AuthLayout />} />
                                 </Route>
+
                             </Route>
 
-                            <Route path="*" element={<NotFound />} />
+                            {/* <Route path="*" element={<NotFound />} /> */}
 
                         </Routes>
 
@@ -124,23 +125,24 @@ function RequireAuth() {
     //    window.location.assign('/login');
     //}
     // Xử lý cho phép open new tab trên site learner
-    if (!oauthStore.token) {
-        window.location.assign('/login');
-    }
-    //datnh: fix lỗi logout từ admin weblearn cũng logout, kiểm tra token có giá trị và cookie hết hạn
-    if(import.meta.env.MODE !== "development"){
-        console.log(import.meta.env.MODE);
-        try{
-       
-            let auth_Cookie = Cookies.get()
-            console.log('auth_Cookie',auth_Cookie)
-            if(auth_Cookie.LogOnCode===undefined && oauthStore.token) {
-                window.location.assign('/logout');
-            }
-        }catch{
     
-        }
-    }
+    // if (!oauthStore.token) {
+    //     window.location.assign('/login');
+    // }
+    // //datnh: fix lỗi logout từ admin weblearn cũng logout, kiểm tra token có giá trị và cookie hết hạn
+    // if(import.meta.env.MODE !== "development"){
+    //     console.log(import.meta.env.MODE);
+    //     try{
+       
+    //         let auth_Cookie = Cookies.get()
+    //         console.log('auth_Cookie',auth_Cookie)
+    //         if(auth_Cookie.LogOnCode===undefined && oauthStore.token) {
+    //             window.location.assign('/logout');
+    //         }
+    //     }catch{
+    
+    //     }
+    // }
 
     return <Outlet />;
 }

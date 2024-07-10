@@ -76,14 +76,7 @@ const AdminLayout = () => {
   }
 
   useEffect(() => {
-    
-    // moduleService.getTree().then(res=>{
-    //   console.log(res);
-    // })
-    // userService.permission().then(res=>{
-    //     dispatch(setPermission(res.data));
-    // });
-    checkDevice();
+    // checkDevice();
   }, []);
 
   return (

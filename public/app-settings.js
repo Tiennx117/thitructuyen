@@ -1,13 +1,12 @@
 / eslint-disable /
 var appSetting = window.appSetting = {
-    "ADDRESS_WEB": "http://127.0.0.1:3000",
-    // "ADMIN_URL": "http://10.0.0.122:7000",
-    "ADMIN_URL": "https://127.0.0.1:4001",
-    "PATH_APISQLITE": "http://10.0.0.120:7001/api",
-    "PATH_APILMS_V2": "/AppService/api/v2",
-    "PATH_APICHATBOT": "http://localhost:4002/api",
-    "PATH_APILOG_V2": "/AppLmsLog/api/v2",
-    "PATH_APILMS_V": "/AppService/api/",
+    // "ADDRESS_WEB": "http://127.0.0.1:3000",
+    // "ADMIN_URL": "https://127.0.0.1:4001",
+    // "PATH_APISQLITE": "http://10.0.0.120:7001/api",
+    // "PATH_APILMS_V2": "/AppService/api/v2",
+    // "PATH_APICHATBOT": "http://localhost:4002/api",
+    // "PATH_APILOG_V2": "/AppLmsLog/api/v2",
+    // "PATH_APILMS_V": "/AppService/api/",
     "ADFSLogoutURL": "/Home.aspx?adfs_logout=https://eps.lms.com/adfs/ls/?wa=wsignout1.0",
     "ADDRESS_LOGGER": "",
     "LIST_API_LOG": [
